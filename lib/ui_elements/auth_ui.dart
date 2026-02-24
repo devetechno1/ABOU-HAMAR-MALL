@@ -137,7 +137,7 @@ class AuthScreen {
                         child: Container(
                           padding: const EdgeInsets.symmetric(
                             horizontal: 8,
-                            vertical: 12,
+                           
                           ),
                           width: 72,
                           height: 72,
@@ -147,7 +147,12 @@ class AuthScreen {
                               AppDimensions.radiusSmall,
                             ),
                           ),
-                          child: Image.asset(AppImages.loginRegistration),
+                        child: Image.asset(
+                             AppImages.loginRegistration,
+                              width: double.infinity,
+                               height: double.infinity,
+                                fit: BoxFit.cover,
+                                  ),
                         ),
                       ),
                     ),
