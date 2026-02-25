@@ -35,16 +35,24 @@ class AnimatedImageWidget extends StatelessWidget {
             child: Container(
               height: 100,
               width: 100,
-              padding: const EdgeInsets.all(6),
+              padding: EdgeInsets.zero,
               decoration: BoxDecoration(
                 color: MyTheme.white,
-                borderRadius: BorderRadius.circular(
-                  AppDimensions.radiusSmall,
-                ),
+                borderRadius: BorderRadius.circular(AppDimensions.radiusSmall),
               ),
-              child: Image.asset(
-                AppImages.splashScreenLogo,
-                filterQuality: FilterQuality.low,
+              // الصورة تكبر داخل نفس مساحة الكونتينر
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(AppDimensions.radiusSmall),
+                child: FittedBox(
+                  fit: BoxFit.contain,
+                  child: Transform.scale(
+                    scale: 1.25,
+                    child: Image.asset(
+                      AppImages.splashScreenLogo,
+                      filterQuality: FilterQuality.low,
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
