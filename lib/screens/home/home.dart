@@ -5,13 +5,13 @@ import 'package:active_ecommerce_cms_demo_app/custom/home_banners/home_banners_t
 import 'package:active_ecommerce_cms_demo_app/custom/home_banners/home_banners_two.dart';
 import 'package:active_ecommerce_cms_demo_app/presenter/home_provider.dart';
 import 'package:active_ecommerce_cms_demo_app/screens/home/widgets/featured_products_list_sliver.dart';
-import 'package:active_ecommerce_cms_demo_app/screens/home/widgets/featured_category/featured_category_horizontal.dart';
 import 'package:active_ecommerce_cms_demo_app/screens/home/widgets/menu_item_list.dart';
 
 import 'package:flutter/material.dart';
 import 'package:active_ecommerce_cms_demo_app/locale/custom_localization.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
+import '../../custom/featured_category/enum_feature_category.dart';
 import '../../custom/home_all_products_2.dart';
 import '../../custom/home_carousel_slider.dart';
 import '../../custom/pirated_widget.dart';
@@ -40,7 +40,7 @@ class Home extends StatelessWidget {
         ),
 
         //Featured Categories
-        const CategoryListHorizontal(),
+        buildFeaturedCategory(context),
         const SliverToBoxAdapter(child: HomeBannersTwo()),
         // const  CategoryListVertical(crossAxisCount: 5,),
 

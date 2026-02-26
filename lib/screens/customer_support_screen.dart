@@ -51,7 +51,7 @@ class _CustomerSupportScreenState extends State<CustomerSupportScreen> {
       backgroundColor: Colors.grey.shade200,
       appBar: SupportAppBar(
         onClose: () => Navigator.pop(context),
-        rightWidget: Image.asset(AppImages.squareLogo, width: 50),
+        rightWidget: Image.asset(AppImages.squareLogo, width: 30),
       ),
       body: Column(
         children: [
